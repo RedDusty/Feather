@@ -1,0 +1,73 @@
+#layersSection {
+  background: var(--gray_mediumdark);
+  padding: 4px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+  overflow-y: scroll;
+}
+
+.layers-buttons {
+  padding: 4px;
+  border: 1px solid var(--gray_light);
+}
+
+.layers-buttons:hover {
+  border-color: var(--orange_light);
+}
+
+.layers-buttons button {
+  background: var(--white);
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  cursor: pointer;
+  border: 1px solid var(--gray_medium);
+}
+
+.layers-buttons button:hover {
+  border-color: var(--lightblue_light);
+  background: var(--purple_light);
+}
+
+.layers-buttons button img {
+  width: 18px;
+  height: 18px;
+}
+
+.layer {
+  padding: 4px;
+  display: flex;
+  gap: 4px;
+  border: 1px solid var(--gray_medium);
+  background: var(--white);
+}
+
+.layer:hover {
+  filter: brightness(0.95);
+}
+
+.layer:focus {
+  filter: brightness(1);
+}
+
+.layer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.layer-btn {
+  width: 16px;
+  height: 16px;
+  background: var(--white);
+  border: 1px solid var(--gray_medium);
+}
+
+.layer-btn:hover {
+  border-color: var(--orange_light);
+}
+
+.layer-brd-fcs {
+  border-color: var(--blue_medium);
+}
