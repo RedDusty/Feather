@@ -1,13 +1,38 @@
+/* tailwind colors */
 :root {
   --white: rgb(255, 255, 255);
-  --gray_light: rgb(200, 200, 200);
-  --gray_medium: rgb(150, 150, 150);
-  --gray_mediumdark: rgb(125, 125, 125);
-  --orange_light: rgb(255, 200, 150);
-  --lightblue_light: rgb(125, 200, 255);
-  --blue_medium: rgb(125, 138, 255);
-  --purple_light: rgb(240, 240, 255);
-  --purple_medium: rgb(175, 150, 255);
+  --zinc-50: rgb(250 250 250);
+  --zinc-100: rgb(244 244 245);
+  --zinc-200: rgb(228 228 231);
+  --zinc-300: rgb(212 212 216);
+  --zinc-400: rgb(161 161 170);
+  --zinc-500: rgb(113 113 122);
+  --zinc-600: rgb(82 82 91);
+  --zinc-700: rgb(63 63 70);
+  --zinc-800: rgb(39 39 42);
+  --zinc-900: rgb(24 24 27);
+  --orange-50: rgb(255 247 237);
+  --orange-100: rgb(255 237 213);
+  --orange-200: rgb(254 215 170);
+  --orange-300: rgb(253 186 116);
+  --orange-400: rgb(251 146 60);
+  --orange-400-f: invert(73%) sepia(75%) saturate(2899%) hue-rotate(334deg) brightness(105%) contrast(97%);
+  --orange-500: rgb(249 115 22);
+  --orange-600: rgb(234 88 12);
+  --orange-700: rgb(194 65 12);
+  --orange-800: rgb(154 52 18);
+  --orange-900: rgb(124 45 18);
+  --blue-50: rgb(239 246 255);
+  --blue-100: rgb(219 234 254);
+  --blue-200: rgb(191 219 254);
+  --blue-300: rgb(147 197 253);
+  --blue-400: rgb(96 165 250);
+  --blue-400-f: invert(58%) sepia(41%) saturate(1454%) hue-rotate(189deg) brightness(101%) contrast(96%);
+  --blue-500: rgb(59 130 246);
+  --blue-600: rgb(37 99 235);
+  --blue-700: rgb(29 78 216);
+  --blue-800: rgb(30 64 175);
+  --blue-900: rgb(30 58 138);
 }
 
 * {
@@ -24,4 +49,13 @@ body {
 .full {
   width: 100%;
   height: 100%;
+}
+
+.action-border {
+  padding: 4px;
+  border: 1px solid var(--zinc-700);
+}
+
+.action-border:hover {
+  border-color: var(--orange-400);
 }

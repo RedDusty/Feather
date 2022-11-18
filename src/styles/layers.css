@@ -1,5 +1,5 @@
 #layersSection {
-  background: var(--gray_mediumdark);
+  background: var(--zinc-500);
   padding: 4px;
   display: flex;
   flex-direction: column-reverse;
@@ -7,67 +7,91 @@
   overflow-y: scroll;
 }
 
-.layers-buttons {
-  padding: 4px;
-  border: 1px solid var(--gray_light);
+.layer-action-buttons {
+  display: flex;
+  gap: 4px;
 }
 
-.layers-buttons:hover {
-  border-color: var(--orange_light);
-}
-
-.layers-buttons button {
+.layers-action-button {
   background: var(--white);
   width: 24px;
   height: 24px;
   padding: 2px;
   cursor: pointer;
-  border: 1px solid var(--gray_medium);
+  border: 1px solid var(--zinc-700);
 }
 
-.layers-buttons button:hover {
-  border-color: var(--lightblue_light);
-  background: var(--purple_light);
+.layers-action-button:hover {
+  border-color: var(--orange-400);
 }
 
-.layers-buttons button img {
-  width: 18px;
-  height: 18px;
+.layers-action-button:hover img {
+  filter: var(--orange-400-f)
+}
+
+.layers-action-button img {
+  width: 100%;
+  height: 100%;
 }
 
 .layer {
-  padding: 4px;
+  padding: 2px;
   display: flex;
   gap: 4px;
-  border: 1px solid var(--gray_medium);
+  border: 1px solid var(--zinc-700);
   background: var(--white);
 }
 
+.layer-button {
+  width: 18px;
+  height: 18px;
+  background: var(--white);
+  border: 1px solid var(--zinc-700);
+  cursor: pointer;
+}
+
+.layer-button:hover {
+  border-color: var(--orange-400);
+}
+
+.layer-button img {
+  width: 100%;
+  height: 100%;
+}
+
+.layer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+}
+
 .layer:hover {
-  filter: brightness(0.95);
+  filter: brightness(0.9);
 }
 
 .layer:focus {
   filter: brightness(1);
 }
 
-.layer-col {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.layer-focused {
+  border-color: var(--blue-400);
 }
 
-.layer-btn {
-  width: 16px;
-  height: 16px;
-  background: var(--white);
-  border: 1px solid var(--gray_medium);
+.layer-button:hover img {
+  filter: var(--orange-400-f);
 }
 
-.layer-btn:hover {
-  border-color: var(--orange_light);
+.layer-name {
+  font-size: 14px;
 }
 
-.layer-brd-fcs {
-  border-color: var(--blue_medium);
+.layer-opacity {
+  font-size: 10px;
+  cursor: default;
+}
+
+.layer-opacity:hover {
+  transform: scale(1.2);
 }

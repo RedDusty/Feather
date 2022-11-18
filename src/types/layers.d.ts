@@ -39,8 +39,8 @@ export type layerType = {
 };
 
 export type layerStateType = {
-  layersSelected: number[];
-  layerFocused: number | null;
+  layersSelectedID: number[];
+  layerFocusedID: number | null;
   layers: layerType[];
   nextLayerID: number;
   onScreenCVS: HTMLCanvasElement | null;

@@ -2,10 +2,10 @@
   min-width: 250px;
   width: 250px;
   height: 100%;
-  border: 1px solid var(--gray_light);
+  border: 1px solid var(--gray-light);
   padding: 4px;
 }
 
 .panel:hover {
-  border-color: var(--orange_light);
+  border-color: var(--orange-light);
 }
