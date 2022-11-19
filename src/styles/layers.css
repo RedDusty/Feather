@@ -7,7 +7,7 @@
   overflow-y: scroll;
 }
 
-.layer-action-buttons {
+.action-buttons {
   display: flex;
   gap: 4px;
 }

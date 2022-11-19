@@ -1,19 +1,18 @@
 import React from 'react';
-import ActionBorder from '@components/ActionBorder';
-import LayersAction from '@components/layers/LayersAction';
+import ActionButton from '@components/ActionButton';
 import layerCreate from '@assets/icons/layers/layerCreate.svg';
 import layerDelete from '@assets/icons/layers/layerDelete.svg';
 
 function Layers() {
-	return <ActionBorder>
-		<div className='layer-action-buttons'>
-			<LayersAction svg={layerCreate} alt='+' callback={() => {return;}} />
-			<LayersAction svg={layerDelete} alt='-' callback={() => {return;}} />
+	return <div className='full'>
+		<div className='action-buttons'>
+			<ActionButton svg={layerCreate} alt='+' title='Layer create' callback={() => {return;}} />
+			<ActionButton svg={layerDelete} alt='-' title='Layer delete' callback={() => {return;}} />
 		</div>
 		<div>
 
 		</div>
-	</ActionBorder>;
+	</div>;
 }
 
 export default Layers;

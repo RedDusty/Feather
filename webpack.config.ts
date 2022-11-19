@@ -11,7 +11,10 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const config: webpack.Configuration = {
 	mode: isProd ? 'production' : 'development',
-	entry: path.resolve(__dirname, 'src', 'index.tsx'),
+	entry: [
+		path.resolve(__dirname, 'src', 'index.tsx'),
+		path.resolve(__dirname, 'src', 'canvas.ts'),
+	],
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle-[hash].js',

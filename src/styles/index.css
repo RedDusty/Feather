@@ -59,3 +59,15 @@ body {
 .action-border:hover {
   border-color: var(--orange-400);
 }
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
