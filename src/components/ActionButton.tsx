@@ -8,7 +8,7 @@ type props = {
 }
 
 function ActionButton({ svg, alt, title, callback }: props) {
-	return <button onClick={callback} className='layers-action-button' title={title}>
+	return <button onClick={callback} className='action-button' title={title}>
 		{svg ? <img src={svg} alt={alt} /> : <p>{alt}</p>}
 	</button>;
 }

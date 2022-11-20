@@ -1,5 +1,13 @@
 {
   "github": {
-    "enabled": false
-  }
+    "deploymentEnabled": {
+      "main": true
+    }
+  },
+  "buildCommand": "yarn build",
+  "cleanUrls": true,
+  "framework": null,
+  "outputDirectory": "dist",
+  "public": true,
+  "trailingSlash": false
 }

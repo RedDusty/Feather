@@ -19,10 +19,12 @@ function Brush() {
 	return <div className='action-buttons'>
 		<ActionButton svg={PencilSvg} alt='✎' title='Brush (pencil)' callback={brushPencilHandler} />
 		<ActionButton svg={MoveSvg} alt='+' title='Move' callback={moveHandler} />
+		{/* [point] - make own color button */}
 		<input
-			className='layers-action-button'
+			className='action-button'
 			title={'Color: ' + state.color}
 			type='color'
+			id='color-button-input'
 			onChange={colorHandler}
 			value={color} />
 	</div>;
