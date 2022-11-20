@@ -30,10 +30,6 @@ export const brushState: brushStateType = {
 	}
 };
 
-export function changeTool(tool: toolType) {
-	state.tool = tool;
-}
-
 export const state: stateType = {
 	brush_current: 'pencil',
 	tool: 'brush',
@@ -46,6 +42,8 @@ export const state: stateType = {
 	}
 };
 
-export function getBrushRadius() {
-	return brushState[state.brush_current].width;
-}
+export const setBrushStateTool = (tool: toolType) =>	state.tool = tool;
+
+export const getStateBrushRadius = () => brushState[state.brush_current].width;
+
+export const setStateColor = (hex: string) => state.color = hex;

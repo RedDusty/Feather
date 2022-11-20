@@ -1,4 +1,4 @@
-import { brushState, getBrushRadius, state } from '@scripts/state';
+import { brushState, getStateBrushRadius, state } from '@scripts/state';
 import moveSvg from '@assets/icons/brush/move.svg';
 
 const moveSVGImage = new Image(24, 24);
@@ -37,7 +37,7 @@ function draw_cursor_on_canvas(e: MouseEvent) {
 	switch (state.tool) {
 	case 'brush':
 	default:
-		const radius = (getBrushRadius() ?? 5) / 2;
+		const radius = (getStateBrushRadius() ?? 5) / 2;
 		// [point] - maybe need another method
 		// const pixel = offctx.getImageData(posX, posY, 1, 1).data;
 		// let hex = rgba2hex(255 - pixel[0], 255 - pixel[1], 255 - pixel[2]);
@@ -58,7 +58,7 @@ function draw(e: MouseEvent) {
 	if (!state.is_drawing) return draw_cursor_on_canvas(e);
 	if (state.tool !== 'brush') return;
 
-	offctx.lineWidth = getBrushRadius();
+	offctx.lineWidth = getStateBrushRadius();
 	offctx.lineCap = brushState.pencil.cap;
 	offctx.strokeStyle = state.color;
 	offctx.lineTo(e.clientX, e.clientY);
