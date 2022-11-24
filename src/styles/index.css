@@ -76,6 +76,10 @@ body {
   border: 1px solid var(--zinc-700);
 }
 
+.action-button-width-a {
+  width: 64px;
+}
+
 .action-button:hover {
   border-color: var(--orange-400);
 }

@@ -1,8 +1,9 @@
 {
   "github": {
     "deploymentEnabled": {
-      "main": true
-    }
+      "main": false
+    },
+    "silent": true
   },
   "buildCommand": "yarn build",
   "cleanUrls": true,
