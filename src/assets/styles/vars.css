@@ -1,0 +1,141 @@
+/* tailwind colors */
+:root {
+	--white: rgb(255, 255, 255);
+	--black: rgb(0, 0, 0);
+	/* zinc */
+	--zinc-50: rgb(250 250 250);
+	--zinc-100: rgb(244 244 245);
+	--zinc-200: rgb(228 228 231);
+	--zinc-300: rgb(212 212 216);
+	--zinc-400: rgb(161 161 170);
+	--zinc-500: rgb(113 113 122);
+	--zinc-600: rgb(82 82 91);
+	--zinc-700: rgb(63 63 70);
+	--zinc-800: rgb(39 39 42);
+	--zinc-900: rgb(24 24 27);
+	/* orange */
+	--orange-50: rgb(255 247 237);
+	--orange-100: rgb(255 237 213);
+	--orange-200: rgb(254 215 170);
+	--orange-300: rgb(253 186 116);
+	--orange-400: rgb(251 146 60);
+	--orange-400-f: invert(73%) sepia(75%) saturate(2899%) hue-rotate(334deg) brightness(105%) contrast(97%);
+	--orange-500: rgb(249 115 22);
+	--orange-600: rgb(234 88 12);
+	--orange-700: rgb(194 65 12);
+	--orange-700-f: invert(23%) sepia(79%) saturate(2598%) hue-rotate(11deg) brightness(93%) contrast(91%);
+	--orange-800: rgb(154 52 18);
+	--orange-900: rgb(124 45 18);
+	/* blue */
+	--blue-50: rgb(239 246 255);
+	--blue-100: rgb(219 234 254);
+	--blue-200: rgb(191 219 254);
+	--blue-300: rgb(147 197 253);
+	--blue-400: rgb(96 165 250);
+	--blue-400-f: invert(58%) sepia(41%) saturate(1454%) hue-rotate(189deg) brightness(101%) contrast(96%);
+	--blue-500: rgb(59 130 246);
+	--blue-600: rgb(37 99 235);
+	--blue-700: rgb(29 78 216);
+	--blue-800: rgb(30 64 175);
+	--blue-900: rgb(30 58 138);
+	/* Emerald in tailwind */
+	--green-50: #ecfdf5;
+	--green-100: #d1fae5;
+	--green-200: #a7f3d0;
+	--green-300: #6ee7b7;
+	--green-400: #34d399;
+	--green-500: #10b981;
+	--green-600: #059669;
+	--green-700: #047857;
+	--green-800: #047857;
+	--green-900: #064e3b;
+	/* red */
+	--red-50: #fef2f2;
+	--red-100: #fee2e2;
+	--red-200: #fecaca;
+	--red-300: #fca5a5;
+	--red-400: #f87171;
+	--red-500: #ef4444;
+	--red-600: #dc2626;
+	--red-700: #b91c1c;
+	--red-800: #991b1b;
+	--red-900: #7f1d1d;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Thin.ttf') format('truetype');
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-ThinItalic.ttf') format('truetype');
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Light.ttf') format('truetype');
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Italic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-MediumItalic.ttf') format('truetype');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-BoldItalic.ttf') format('truetype');
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Black.ttf') format('truetype');
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-BlackItalic.ttf') format('truetype');
+	font-weight: 800;
+	font-style: italic;
+}

@@ -22,27 +22,30 @@ type lockLayerType = {
   isPainting: boolean;
 };
 
-export type layerTypesType = 'raster' | 'vector' | 'reference';
+type layerTypesType = 'raster' | 'vector' | 'reference';
 
-export type layerType = {
+type layerType = {
   name: string;
   isVisible: boolean;
   opacity: number;
   mode: modeType;
   locks: lockLayerType;
   id: number;
-  cvs: OffscreenCanvas;
-  ctx: OffscreenCanvasRenderingContext2D;
   type: layerTypesType;
   x: number;
   y: number;
 };
 
-export type layerStateType = {
+type layersSliceType = {
   layersSelectedID: number[];
   layerFocusedID: number | null;
   layers: layerType[];
   nextLayerID: number;
-  onScreenCVS: HTMLCanvasElement | null;
-  onScreenCTX: CanvasRenderingContext2D | null;
 };
+
+type layersNodes = {
+  id: number;
+  cvs: OffscreenCanvas;
+  ctx: OffscreenCanvasRenderingContext2D;
+  isVisible: boolean;
+}

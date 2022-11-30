@@ -1,0 +1,10 @@
+{
+	"desynchronized": "Decreasing latency of canvas, but reduces performance when enabled.",
+	"willReadFrequently": "Disables hardware acceleration when enabled.",
+	"radiusExtender": "Draws an extra circle when the brush size is too small. Barely noticeably reduces performance.",
+	"render": [
+		"Beta. Works only when drawing with a brush! Min radius 50.",
+		"Redraws the entire canvas when disabled.",
+		"Redraws the canvas around the cursor in a given radius when enabled."
+	]
+}

@@ -20,10 +20,10 @@ const config: webpack.Configuration = {
 		filename: 'bundle-[hash].js',
 		clean: true
 	},
-	devtool: isProd ? false : 'eval',
+	devtool: isProd ? false : 'eval-source-map',
 	devServer: {
 		hot: true,
-		liveReload: false
+		liveReload: false,
 	},
 	resolve: {
 		extensions: ['.ts', '.js', '.tsx', '.jsx'], 
@@ -34,9 +34,11 @@ const config: webpack.Configuration = {
 		alias: {
 			'@assets': path.resolve(__dirname, 'src', 'assets'),
 			'@scripts': path.resolve(__dirname, 'src', 'scripts'),
-			'@styles': path.resolve(__dirname, 'src', 'styles'),
 			'@typings': path.resolve(__dirname, 'src', 'types'),
 			'@components': path.resolve(__dirname, 'src', 'components'),
+			'@feather': path.resolve(__dirname, 'src', 'feather'),
+			'@redux': path.resolve(__dirname, 'src', 'redux'),
+			'@canvas': path.resolve(__dirname, 'src', 'canvas.ts')
 		}
 	},
 	module: {
@@ -48,12 +50,7 @@ const config: webpack.Configuration = {
 					loader: 'babel-loader',
 					options: {
 						cacheDirectory: true,
-						babelrc: false,
-						presets: [
-							'@babel/preset-env',
-							'@babel/preset-react',
-							'@babel/preset-typescript'
-						]
+						babelrc: true,
 					}
 				},
 			},
@@ -106,8 +103,8 @@ const config: webpack.Configuration = {
 			},
 		}),
 		new MiniCssExtractPlugin({
-			filename: isProd ? 'css/[name].css': 'css/[name].[contenthash].css' ,
-			chunkFilename: isProd ? 'css/[id].css' : 'css/[id].[contenthash].css'
+			filename: isProd ? 'css/[name].css': 'css/[name].css' ,
+			chunkFilename: isProd ? 'css/[id].css' : 'css/[id].css'
 
 		}),
 		isProd! ? new webpack.HotModuleReplacementPlugin() : () => {return false;},

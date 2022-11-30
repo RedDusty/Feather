@@ -6,7 +6,7 @@ type backgroundType = 'white' | 'black' | 'white-checkered' | 'black-checkered' 
 
 type fileStorageType = 'skip' | 'cloud' | 'driverts' | 'drivedl';
 
-export type fileStateType = {
+type fileStateType = {
   width: number;
   height: number;
   sizeMetrics: sizeMetricsType;

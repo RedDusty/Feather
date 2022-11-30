@@ -1,17 +1,24 @@
 import React from 'react';
-import ActionButton from '@components/ActionButton';
-import layerCreate from '@assets/icons/layers/layerCreate.svg';
-import layerDelete from '@assets/icons/layers/layerDelete.svg';
+import ActionButton from '@components/Utils/ActionButton';
+import LayersRender from '@components/layers/LayersRender';
+import layerCreateSVG from '@assets/icons/layers/layerCreate.svg';
+import layerDeleteSVG from '@assets/icons/layers/layerDelete.svg';
+import { useAppDispatch } from '@redux/store';
+import { addLayer } from '@redux/layers/layersSlice';
 
 function Layers() {
-	return <div className='full'>
-		<div className='action-buttons'>
-			<ActionButton svg={layerCreate} alt='+' title='Layer create' callback={() => {return;}} />
-			<ActionButton svg={layerDelete} alt='-' title='Layer delete' callback={() => {return;}} />
-		</div>
-		<div>
+	const dispatch = useAppDispatch();
 
+	const layerCreateHandler = () => {
+		dispatch(addLayer());
+	};
+
+	return <div className='full section'>
+		<div className='action-buttons'>
+			<ActionButton svg={layerCreateSVG} alt='+' title='Layer create' callback={layerCreateHandler} />
+			<ActionButton svg={layerDeleteSVG} alt='-' title='Layer delete' callback={() => {return;}} />
 		</div>
+		<LayersRender />
 	</div>;
 }
 

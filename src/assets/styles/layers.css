@@ -1,9 +1,22 @@
+.layers-render {
+  padding: 2px;
+  max-height: 304px;
+  overflow-y: scroll;
+}
+
 .layer {
+  margin: 2px 0;
   padding: 2px;
   display: flex;
   gap: 4px;
   border: 1px solid var(--zinc-700);
   background: var(--white);
+}
+
+.layers-no {
+  font-size: 16px;
+  color: rgb(125, 125, 125);
+  font-weight: 600;
 }
 
 .layer-button {
