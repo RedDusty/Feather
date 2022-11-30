@@ -43,6 +43,12 @@ type layersSliceType = {
   nextLayerID: number;
 };
 
+type layersSliceSelectType = {
+  isCTRL: boolean;
+  isSHIFT: boolean;
+  id: number;
+}
+
 type layersNodes = {
   id: number;
   cvs: OffscreenCanvas;

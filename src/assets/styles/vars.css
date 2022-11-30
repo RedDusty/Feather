@@ -38,6 +38,28 @@
 	--blue-700: rgb(29 78 216);
 	--blue-800: rgb(30 64 175);
 	--blue-900: rgb(30 58 138);
+	/* indigo */
+	--indigo-50: #eef2ff;
+	--indigo-100: #e0e7ff;
+	--indigo-200: #c7d2fe;
+	--indigo-300: #a5b4fc;
+	--indigo-400: #818cf8;
+	--indigo-500: #6366f1;
+	--indigo-600: #4f46e5;
+	--indigo-700: #4338ca;
+	--indigo-800: #3730a3;
+	--indigo-900: #312e81;
+	/* sky */
+	--sky-50: #f0f9ff;
+	--sky-100: #e0f2fe;
+	--sky-200: #bae6fd;
+	--sky-300: #7dd3fc;
+	--sky-400: #38bdf8;
+	--sky-500: #0ea5e9;
+	--sky-600: #0284c7;
+	--sky-700: #0369a1;
+	--sky-800: #075985;
+	--sky-900: #0c4a6e;
 	/* Emerald in tailwind */
 	--green-50: #ecfdf5;
 	--green-100: #d1fae5;

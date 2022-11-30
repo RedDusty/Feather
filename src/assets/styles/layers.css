@@ -13,6 +13,16 @@
   background: var(--white);
 }
 
+.layer-sel {
+  border-color: var(--sky-700);
+  background: var(--sky-100);
+}
+
+.layer-foc {
+  border-color: var(--indigo-700);
+  background: var(--indigo-100);
+}
+
 .layers-no {
   font-size: 16px;
   color: rgb(125, 125, 125);
@@ -25,6 +35,14 @@
   background: var(--white);
   border: 1px solid var(--zinc-700);
   cursor: pointer;
+}
+
+.layer-sel .layer-button {
+  border-color: var(--sky-700);
+}
+
+.layer-foc .layer-button {
+  border-color: var(--indigo-700);
 }
 
 .layer-button:hover {
@@ -45,15 +63,11 @@
 }
 
 .layer:hover {
-  filter: brightness(0.9);
+  filter: brightness(0.95);
 }
 
 .layer:focus {
   filter: brightness(1);
-}
-
-.layer-focused {
-  border-color: var(--blue-400);
 }
 
 .layer-button:hover img {
