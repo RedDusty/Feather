@@ -49,6 +49,11 @@ type layersSliceSelectType = {
   id: number;
 }
 
+type layersSliceMoveType = {
+  layerDraggedID: number;
+  layerReplacedID: number;
+}
+
 type layersNodes = {
   id: number;
   cvs: OffscreenCanvas;

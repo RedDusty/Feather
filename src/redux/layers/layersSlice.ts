@@ -5,7 +5,7 @@ const initialState: layersSliceType = {
 	layerFocusedID: null,
 	layers: [],
 	layersSelectedID: [],
-	nextLayerID: 0
+	nextLayerID: 0,
 };
 
 export const layersSlice = createSlice({
@@ -19,7 +19,7 @@ export const layersSlice = createSlice({
 			ctx.imageSmoothingEnabled = false;
 			const layerID = state.nextLayerID;
 			const place = state.layers.findIndex((l) => l.id === state.layerFocusedID);
-			layersNodes.push({
+			layersNodes.splice(place, 0, {
 				cvs, ctx, id: layerID, isVisible: true
 			});
 			state.layers.splice(place, 0, {
@@ -64,9 +64,27 @@ export const layersSlice = createSlice({
 				}
 				state.layersSelectedID = selIDs;
 			}
+		},
+		moveLayer: (state, action: PayloadAction<layersSliceMoveType>) => {
+			const { layerDraggedID, layerReplacedID } = action.payload;
+			const layerDraggedIndex = state.layers.findIndex(l => l.id === layerDraggedID);
+			const layerDragged = state.layers.find(l => l.id === layerDraggedID);
+			const layerReplacedIndex = state.layers.findIndex(l => l.id === layerReplacedID);
+			const layerReplaced = state.layers.find(l => l.id === layerReplacedID);
+			if (layerReplaced && layerDragged) {
+				state.layers.splice(layerDraggedIndex, 1);
+				state.layers.splice(layerReplacedIndex <= -1 ? 0 : layerReplacedIndex, 0, layerDragged);
+				const temp = layersNodes[layerDraggedIndex];
+				layersNodes.splice(layerDraggedIndex, 1);
+				layersNodes.splice(layerReplacedIndex <= -1 ? 0 : layerReplacedIndex, 0, temp);
+			}
 		}
 	},
 });
 
-export const { addLayer, setFocusedID, selectLayer } = layersSlice.actions;
+export const {
+	addLayer,
+	setFocusedID,
+	selectLayer,
+	moveLayer } = layersSlice.actions;
 export default layersSlice.reducer;

@@ -1,26 +1,76 @@
+.layers-section {
+  overflow: hidden;
+}
+
 .layers-render {
   padding: 2px;
+  min-height: 84px;
   max-height: 304px;
   overflow-y: scroll;
+  position: relative;
 }
 
 .layer {
-  margin: 2px 0;
-  padding: 2px;
-  display: flex;
-  gap: 4px;
+  width: 252px;
+}
+
+.layer-mouse {
+  position: relative;
+}
+
+.layer-mouse-up {
+  height: 21px;
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.25);
+}
+
+.layer-mouse-down {
+  height: 21px;
+  top: 21px;
+  position: absolute;
+  background-color: rgba(0, 0, 255, 0.25);
+}
+
+.layer-cols {
   border: 1px solid var(--zinc-700);
   background: var(--white);
+  display: flex;
+  gap: 4px;
+  margin: 2px 0;
+  padding: 2px;
 }
 
-.layer-sel {
-  border-color: var(--sky-700);
-  background: var(--sky-100);
+.layer-cols-drag {
+  margin: 0;
+  padding: 0 2px;
 }
 
-.layer-foc {
-  border-color: var(--indigo-700);
-  background: var(--indigo-100);
+.layer-cols:hover {
+  filter: brightness(0.95);
+}
+
+.layer-cols:focus {
+  filter: brightness(1);
+}
+
+.layer-empty {
+  height: 42px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  filter: brightness(1) !important;
+}
+
+.layer-empty-inner {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--zinc-700);
+  background-color: var(--zinc-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
 }
 
 .layers-no {
@@ -54,6 +104,31 @@
   height: 100%;
 }
 
+.layer-sel {
+  border-color: var(--sky-700);
+  background: var(--sky-100);
+}
+
+.layer-sel .layer-name,
+.layer-sel .layer-opacity {
+  font-weight: 500;
+}
+
+.layer-foc {
+  border-color: var(--indigo-700);
+  background: var(--indigo-100);
+}
+
+.layer-foc .layer-name,
+.layer-foc .layer-opacity {
+  font-weight: 500;
+}
+
+.layer-replaced {
+  border-color: var(--orange-700);
+  background-color: var(--orange-100);
+}
+
 .layer-col {
   display: flex;
   flex-direction: column;
@@ -62,27 +137,17 @@
   gap: 4px;
 }
 
-.layer:hover {
-  filter: brightness(0.95);
-}
-
-.layer:focus {
-  filter: brightness(1);
-}
-
 .layer-button:hover img {
   filter: var(--orange-400-f);
 }
 
 .layer-name {
   font-size: 14px;
+  font-weight: 400;
 }
 
 .layer-opacity {
-  font-size: 10px;
+  font-size: 12px;
+  font-weight: 400;
   cursor: default;
-}
-
-.layer-opacity:hover {
-  transform: scale(1.2);
 }
